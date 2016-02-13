@@ -10,46 +10,45 @@ import UIKit
 import Mapbox
 
 class HomeController: UIViewController, MGLMapViewDelegate {
-
+    
     
     @IBOutlet var mapView: MGLMapView!
-
-
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Initialize the map
         mapView.delegate = self
+        mapView.showsUserLocation = true
         
+        // Set some UI
         let logo = UIImage(named: "logo")
         let imageViewLogo = UIImageView(image: logo)
         self.navigationItem.titleView = imageViewLogo
-
-        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 9,
-            longitude: -79.25),
-            zoomLevel: 8, animated: false)
         
-        addStop(CLLocationCoordinate2D(latitude: 9, longitude: -79.25))
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     func showUpListRoutes() {
-//        let listRoutesView = ListRoutesView.instanceFromNib()
-//        self.view.addSubview(listRoutesView)
+        //        let listRoutesView = ListRoutesView.instanceFromNib()
+        //        self.view.addSubview(listRoutesView)
         
     }
-
+    
 }
 
 // MARK: MapBox
 extension HomeController {
-
+    
+    // MARK: Implemented methods of MGLMapViewDelegate
+    
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
         var annotationImage = mapView.dequeueReusableAnnotationImageWithIdentifier("stop")
         if annotationImage == nil {
@@ -62,10 +61,17 @@ extension HomeController {
         return annotationImage
     }
     
+    func mapView(mapView: MGLMapView, didUpdateUserLocation userLocation: MGLUserLocation?) {
+        mapView.setCenterCoordinate((userLocation?.coordinate)!, zoomLevel: 15, animated: true)
+    }
+    
+    // MARK: Additional things
+    
     func addStop(coordinates: CLLocationCoordinate2D) {
         let stop = MGLPointAnnotation()
         stop.coordinate = coordinates
         mapView.addAnnotation(stop)
     }
+    
     
 }
