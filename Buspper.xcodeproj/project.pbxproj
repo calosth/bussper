@@ -15,7 +15,7 @@
 		EF18D3881C68279100B42278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF18D3861C68279100B42278 /* LaunchScreen.storyboard */; };
 		EF4385571C6934770086B216 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF4385561C6934770086B216 /* Settings.bundle */; };
 		EF7B93631C6C2C2700117458 /* ListRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B93611C6C2C2700117458 /* ListRoutesView.swift */; };
-		EF7B93641C6C2C2700117458 /* ListRoutesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7B93621C6C2C2700117458 /* ListRoutesView.xib */; };
+		EFD178851C7D5B1F003CEA8B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD178841C7D5B1F003CEA8B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		EF18D3891C68279100B42278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4385561C6934770086B216 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		EF7B93611C6C2C2700117458 /* ListRoutesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRoutesView.swift; sourceTree = "<group>"; };
-		EF7B93621C6C2C2700117458 /* ListRoutesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListRoutesView.xib; sourceTree = "<group>"; };
+		EFD178841C7D5B1F003CEA8B /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				EF18D37D1C68279100B42278 /* AppDelegate.swift */,
 				EF7B93601C6C2BD400117458 /* Controllers */,
 				EF18D3811C68279100B42278 /* Main.storyboard */,
-				EF7B93621C6C2C2700117458 /* ListRoutesView.xib */,
+				EFD178861C7D5D88003CEA8B /* Helpers */,
 				EF18D3841C68279100B42278 /* Assets.xcassets */,
 				EF18D3861C68279100B42278 /* LaunchScreen.storyboard */,
 				EF18D3891C68279100B42278 /* Info.plist */,
@@ -103,6 +103,14 @@
 				EF7B93611C6C2C2700117458 /* ListRoutesView.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EFD178861C7D5D88003CEA8B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFD178841C7D5B1F003CEA8B /* Color.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +184,6 @@
 				EF18D3881C68279100B42278 /* LaunchScreen.storyboard in Resources */,
 				EF18D3851C68279100B42278 /* Assets.xcassets in Resources */,
 				EF18D3831C68279100B42278 /* Main.storyboard in Resources */,
-				EF7B93641C6C2C2700117458 /* ListRoutesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7B93631C6C2C2700117458 /* ListRoutesView.swift in Sources */,
+				EFD178851C7D5B1F003CEA8B /* Color.swift in Sources */,
 				EF18D3801C68279100B42278 /* HomeController.swift in Sources */,
 				EF18D37E1C68279100B42278 /* AppDelegate.swift in Sources */,
 			);
